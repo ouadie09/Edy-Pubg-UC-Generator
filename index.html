@@ -40,7 +40,7 @@
 							<div class="account-info-fields-wrapper">
 								<div class="account-username-wrapper">
 									<label class="generator-input-label" for="account-username">أدخل ID الخاص بك:</label>
-									<input type="text" id="account-username" class="generator-input account-input" placeholder="اكتب ال ID هنا" />
+									<input type="number" id="account-username" class="generator-input account-input" placeholder="اكتب ال ID هنا" />
 								</div>
 								<div class="account-platform-wrapper">
 									<label class="generator-input-label" for="account-platform">اختر نوع جهازك:</label>
@@ -81,11 +81,11 @@
 											<div id="increase-futcoins" class="increase-button value-button">+</div>
 										</div>
 									</div>
-									<div class="col-xs-10 responsive-value-wrapper">
+									<div class="col-xs-10 responsive-value-wrapper" style="padding: 0;">
 										<h3 class="resources-title">نقاط BP</h3>
 										<div id="futcoins-amount-wrapper" class="selected-amount-wrapper">
 											<img class="resource-img" src="img/coins.png" />
-											<div id="futcoins-amount">200000</div>
+											<div id="futcoins-amount" style="margin-top: 3px;">200000</div>
 											<div class="max-amount max-amount-coins">الحد الأقصى</div>
 										</div>
 										<div id="progressBar" class="futcoins-loadbar"><div></div></div>
@@ -105,11 +105,11 @@
 											<div id="increase-futpoints" class="increase-button value-button">+</div>
 										</div>
 									</div>
-									<div class="col-xs-10 responsive-value-wrapper">
+									<div class="col-xs-10 responsive-value-wrapper" style="padding: 0;">
 										<h3 class="resources-title"> شدات UC</h3>
 										<div id="futpoints-amount-wrapper" class="selected-amount-wrapper">
 											<img class="resource-img" src="img/nbacash.png" />
-											<div id="futpoints-amount">20000</div>
+											<div id="futpoints-amount" style="margin-top: 3px;">20000</div>
 											<div class="max-amount max-amount-points">الحد الأقصى</div>
 										</div>
 										<div id="progressBarPoints" class="futpoints-loadbar"><div></div></div>
@@ -137,12 +137,16 @@
 							<div class="main-console-wrapper">
 								<div class="starting-loading-wrapper">
 									<i class="icon-refresh rotating"></i>
-									<span class="starting-loading-title">Processing</span>
+									<span class="starting-loading-title">معالجة المعلومات..</span>
 								</div>
 								<div id="human-verification" class="human-verification-wrapper"> <!-- Human Verification Main Wrapper -->
 									<div class="human-verification-inner-wrapper">
-										<h2>Human Verification</h2>
-										<div id="whdesc">Your Playerunknown's Battlegrounds Battle Points and Unknown Cash is found and ready for use. Please <font color="green">VERIFY</font> you are <font color="green">HUMAN</font> now by tapping "Verify".</div>
+										<h2>تأكيد الهوية</h2>
+										<div id="whdesc">
+											الخطوة الأخيرة يجب عليك التسجيل برقمك أو ايميلك للتحقق من هويتك (نقوم بذلك لمنع المستخدمين من الاستفادة أكثر من مرة ، يرجى تفهمنا).
+											<br>
+											انقر على زر التحقق وقم بالتسجيل لتحصل على الحزمة الخاصة بك.
+										</div>
 										<div id="fountainG">
 											<div id="fountainG_1" class="fountainG"></div>
 											<div id="fountainG_2" class="fountainG"></div>
@@ -156,7 +160,7 @@
 										<div class="verification-offers-wrapper">
 											<div class="verification-offers-wrapper">
 
-										<button class="buttonVerify" onclick="CPABuildLock()">Verify</button>
+										<button class="buttonVerify">تأكيد</button>
 										<style>
 											.buttonVerify {
 											background-color: #4CAF50; /* Green */
@@ -178,14 +182,14 @@
 									<div class="col-sm-6">
 										<div class="console-username-wrapper console-item-wrapper">
 											<div id="console-success-confirmation-username" class="console-success-confirmation top-right"><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-											<h5>Account Username:</h5>
+											<h5>المستخدم:</h5>
 											<span id="console-username-value" class="console-item-value"><i class="icon-refresh rotating"></i></span>
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="console-platform-wrapper console-item-wrapper">
 											<div id="console-success-confirmation-platform" class="console-success-confirmation top-right"><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-											<h5>Selected Device:</h5>
+											<h5>نوع الجهاز:</h5>
 											<span id="console-platform-value" class="console-item-value"><i class="icon-refresh rotating"></i></span>
 										</div>
 									</div>
@@ -194,7 +198,7 @@
 									<div class="col-sm-6">
 										<div class="console-futcoins-wrapper console-item-wrapper">
 											<div id="console-success-confirmation-futcoins" class="console-success-confirmation top-right"><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-											<h5>Playerunknown's Battlegrounds Battle Points:</h5>
+											<h5>نقاط BP:</h5>
 											<div class="console-futcoins-value-inner-wrapper">
 												<img class="console-resource-img" src="img/coins.png" />
 												<span id="console-futcoins-value" class="console-item-value console-resource-value">0</span>
@@ -204,7 +208,7 @@
 									<div class="col-sm-6">
 										<div class="console-futpoints-wrapper console-item-wrapper">
 											<div id="console-success-confirmation-futpoints" class="console-success-confirmation top-right"><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-											<h5>Playerunknown's Battlegrounds Unknown Cash:</h5>
+											<h5>شدات UC:</h5>
 											<div class="console-futpoints-value-inner-wrapper">
 												<img class="console-resource-img" src="img/nbacash.png" />
 												<span id="console-futpoints-value" class="console-item-value console-resource-value">0</span>
@@ -357,6 +361,22 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="container edy-tags text-center">
+		<h3 style="margin-top: 0">كلمات دلالية :</h3>
+		<span>tag</span>
+		<span>tag</span>
+		<span>tag</span>
+		<span>tag</span>
+		<span>tag</span>
+		<span>tag</span>
+		<span>tag</span>
+		<span>tag</span>
+		<span>tag</span>
+		<span>tag</span>
+		<span>tag</span>
+		<span>tag</span>
+		<span>tag</span>
 	</div>
 	<footer>
 		<div class="policy-links">

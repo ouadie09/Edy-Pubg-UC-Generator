@@ -460,6 +460,9 @@ a {
     -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 }
+#console-futcoins-value, #console-futpoints-value {
+	margin-right: 5px;
+}
 #loader:after {
     content: "";
     position: absolute;
@@ -1364,7 +1367,7 @@ body {
 .comment-user-img-wrapp {
     width: auto;
     font-size: 2.4em;
-    margin-right: 20px;
+    margin-left: 20px;
     color: #fddb17;
 }
 #commentUsername, #livechatInputChat, .add-new-comment-wrapp textarea {
@@ -1424,7 +1427,7 @@ label {
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
-	margin-right: 5px;
+	margin-left: 5px;
 }
 .timePosted {
 	margin-right: 10px;
@@ -1794,9 +1797,13 @@ footer {
 	max-width: 800px;
 	margin: 0 auto;
 	text-align: center;
-	padding: 5px 30px;
+	padding: 15px 30px;
 	font-size: 0.9em;
-	color: #999;
+	background: #202127;
+    color: #ffffff;
+}
+footer .policy-links {
+	margin-bottom: 10px;
 }
 footer a.popup-link, footer a.popup-link:visited {
 	
@@ -1977,7 +1984,7 @@ footer a.popup-link, footer a.popup-link:visited {
 		font-size: 2.2em;
 	}
 	.resource-img {
-		top: 5px;
+		top: 8px;
 	}
 	.value-button-wrapper {
 		margin-top: 30px;
@@ -2054,4 +2061,23 @@ footer a.popup-link, footer a.popup-link:visited {
 	.console-item-wrapper .console-resource-value {
 		font-size: 2em;
 	}
+}
+
+.edy-tags{
+	background: url(../img/panel-overlay.png);
+    background-color: #202127;
+    margin-bottom: 20px;
+    color: #fff;
+    padding: 20px;
+    border-radius: 3px;
+}
+.edy-tags h3{
+	text-decoration: underline;
+}
+.edy-tags span{
+	padding: 2px 20px;
+    background: #34363b;
+    margin: 3px;
+    display: inline-block;
+	border-radius: 15px;
 }
